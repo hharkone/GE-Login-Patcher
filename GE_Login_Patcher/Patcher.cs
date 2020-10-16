@@ -157,7 +157,7 @@ namespace GE_Login_Patcher
             InsertString(ref contents, "domains.list.indexOf", "return", 0, completeString);
 
             //Dummy user string.
-            string dummyUserString = "," + classNames[0] + ".handleLoggedIn({sessionToken: \"asd\",userToken: \"asd\",user:{core:{displayName: \"GE Patched\",primaryEmailVerified: true}}});";
+            string dummyUserString = "," + classNames[0] + ".handleLoggedIn({sessionToken: \"asd\",userToken: \"asd\",user:{core:{displayName: \"¯∖_(ツ)_/¯\", primaryEmailVerified: true}}});";
 
             //Patch it in.
             InsertString(ref contents, "isLeftPaneVisible=function()", "}", 0, dummyUserString);

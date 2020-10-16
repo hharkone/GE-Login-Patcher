@@ -90,9 +90,8 @@ namespace GE_Login_Patcher
             this.labelError.Location = new System.Drawing.Point(12, 143);
             this.labelError.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(48, 17);
+            this.labelError.Size = new System.Drawing.Size(0, 17);
             this.labelError.TabIndex = 4;
-            this.labelError.Text = "";
             // 
             // Form1
             // 
@@ -104,6 +103,7 @@ namespace GE_Login_Patcher
             this.Controls.Add(this.textBoxPath);
             this.Name = "Form1";
             this.Text = "GE Login Patcher";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,6 +129,11 @@ namespace GE_Login_Patcher
                 this.labelError.ForeColor = Color.Green;
                 this.labelError.Text = "Success!";
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
