@@ -77,6 +77,21 @@ namespace GE_Login_Patcher
         }
 
         public
+        void Restore(string path)
+        {
+            string filename = "app.js";
+            string filenameBackup = "app_BACKUP.js";
+            string pathAndFile = path + "\\" + filename;
+            string pathAndFileBackup = path + "\\" + filenameBackup;
+
+            if (File.Exists(pathAndFileBackup))
+            {
+                File.Copy(pathAndFileBackup, pathAndFile, true);
+                File.Delete(pathAndFileBackup);
+            }
+        }
+
+        public
         bool Patch(string path, ref string errorString)
         {
             string filename = "app.js";

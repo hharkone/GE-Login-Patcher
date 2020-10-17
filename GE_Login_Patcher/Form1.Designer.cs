@@ -26,6 +26,7 @@
         private System.Windows.Forms.Label browseLabel;
         private System.Windows.Forms.Button buttonPatch;
         private System.Windows.Forms.Label labelError;
+        private System.Windows.Forms.Button buttonRestore;
     }
 }
 
