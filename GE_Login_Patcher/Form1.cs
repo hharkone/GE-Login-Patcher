@@ -49,6 +49,7 @@ namespace GE_Login_Patcher
             this.textBoxPath.Size = new System.Drawing.Size(486, 20);
             this.textBoxPath.TabIndex = 0;
             this.textBoxPath.Text = this.folderBrowserElement.SelectedPath;
+            this.textBoxPath.TextChanged += new System.EventHandler(this.TextBoxPath_TextChanged);
             // 
             // buttonBrowse
             // 
@@ -94,7 +95,7 @@ namespace GE_Login_Patcher
             // 
             // buttonRestore
             // 
-            this.buttonRestore.BackColor = Color.LightSalmon;
+            this.buttonRestore.BackColor = System.Drawing.Color.LightSalmon;
             this.buttonRestore.Location = new System.Drawing.Point(199, 61);
             this.buttonRestore.Name = "buttonRestore";
             this.buttonRestore.Size = new System.Drawing.Size(75, 23);
@@ -119,6 +120,12 @@ namespace GE_Login_Patcher
             this.PerformLayout();
 
         }
+
+        private void TextBoxPath_TextChanged(object sender, EventArgs e)
+        {
+            folderBrowserElement.SelectedPath = textBoxPath.Text;
+        }
+
         void UpdateRestoreButton()
         {
             string path = folderBrowserElement.SelectedPath;
