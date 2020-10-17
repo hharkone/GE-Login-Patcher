@@ -132,7 +132,7 @@ namespace GE_Login_Patcher
             }
             else
             {
-                this.buttonRestore.BackColor = Color.LightSalmon;
+                this.buttonRestore.BackColor = Color.LightGray;
                 this.buttonRestore.Enabled = false;
             }
         }
